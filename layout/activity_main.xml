@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AuthMainActivity">
+
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:navGraph="@navigation/auth_nav_graph" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

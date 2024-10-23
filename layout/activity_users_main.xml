@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UsersMainActivity">
+
+    <fragment
+        android:id="@+id/fragmentContainerView2"
+
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBaseline_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/users_nav_graph"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

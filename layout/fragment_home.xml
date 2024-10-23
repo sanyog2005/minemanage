@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchCv"
+        android:layout_width="298dp"
+        android:layout_height="41dp"
+        android:backgroundTint="#E6E4E4"
+
+        app:cardCornerRadius="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281">
+
+        <EditText
+            android:id="@+id/searchEt"
+            android:layout_width="257dp"
+            android:layout_height="match_parent"
+            android:hint="Search..."
+            android:textColorHint="@color/black"
+            android:paddingLeft="20pt"
+            android:paddingTop="5dp"
+            android:textColor="#CCCACA"
+
+            android:textSize="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="256dp"
+            android:padding="4dp"
+            android:src="@drawable/searchicon" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="82dp"
+        android:fontFamily="@font/audiowide"
+
+        android:layout_height="23dp"
+
+        android:text="Park"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.048"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="169dp"
+        android:layout_height="49dp"
+
+        android:fontFamily="@font/audiowide"
+        android:text="King"
+        android:textColor="@color/black"
+        android:textSize="37dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <ImageView
+        android:id="@+id/ivprofile"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:src="@drawable/profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="99dp"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17"
+        app:srcCompat="@drawable/parkking2" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="628dp"
+
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchCv"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/llBestseller"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Present Employees"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBestseller"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+
+
+                android:layout_marginHorizontal="@dimen/_6sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.461"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llBestseller"
+                app:layout_constraintVertical_bias="0.01999998">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/llCategories"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rvBestseller"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Departments and Shifts"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+                    />
+
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvcategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_margin="@dimen/_5sdp"
+
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCategories"
+                app:layout_constraintVertical_bias="0.487"
+                app:spanCount="5">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+    
+
